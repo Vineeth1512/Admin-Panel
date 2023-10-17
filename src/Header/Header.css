@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Caveat+Brush&family=Poppins:wght@600&family=Raleway:ital,wght@0,200;0,400;1,200&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    background-color: #4e657a;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif
+}
+
+.header-wrapper {
+    align-items: center;
+    background-color: #567086;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0 145px;
+    padding-right: 400px;
+}
+
+nav {
+    display: block;
+}
+
+h1 a {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+
+}
+
+.header-wrapper ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.header-wrapper ul li {
+    cursor: pointer;
+    padding: 13px 28px;
+}
+
+.header-wrapper ul li a {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header-wrapper ul li a,
+.header-wrapper ul li i {
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.header-wrapper ul li i {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6e8da6;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #3a4f63;
+}
