@@ -1,29 +1,46 @@
 import React from 'react'
 import './Header.css'
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom'
 function Header(props) {
+    
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const navigate = useNavigate();
+
+    const renderButton = () => {
+        if (props.isLoggedIn === false) {
+          return " ";
+        } else {
+          return <button className='logout-btn' onClick={() =>{
+            localStorage.setItem("isLoggedIn", false);
+             setIsLoggedIn(false)
+             navigate("/");
+              }}>Logout</button>
+        }
+      }
     return (
         <><header className='header-wrapper'>
             <h1><a href='/'> PRODUCT ADMIN</a></h1>
             <nav>
                 <ul>
-                    <li class="">
-                        <a href="/"><i class="fas fa-tachometer-alt"></i><br></br><span>Dashboard</span></a>
+                    <li className="">
+                        <a href="/"><i className="fas fa-tachometer-alt"></i><br></br><span> <Link to={"/dashboard"}>Dashboard</Link></span></a>
                     </li>
-                    <li class="">
-                        <a href="/"> <i class="fas fa-shopping-cart"></i><br></br><span>Products</span></a>
+                    <li className="">
+                        <a href="/"> <i className="fas fa-shopping-cart"></i><br></br><span> <Link to={"/products"}>Products</Link></span></a>
                     </li>
-                    <li class="">
-                        <a href="/"> <i class="far fa-user"></i><br></br><span>Account</span> </a>
+                    <li className="">
+                        <a href="/"> <i className="far fa-user"></i><br></br><span> <Link to={"/acount"}>Acount</Link></span> </a>
                     </li>
 
-
-                    {props.isLoggedIn && (
-                        <li className="">
-                            <button type="button" onClick={props.logout}><i className="fas fa-sign-out-alt"></i><br /><span>Logout</span></button>
-                        </li>
-                    )}
+                    
                 </ul>
             </nav>
+            <div >
+            {renderButton()}
+            </div>
+           
         </header></>
     )
 }

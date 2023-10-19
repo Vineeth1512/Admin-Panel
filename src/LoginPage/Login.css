@@ -64,7 +64,7 @@ input:focus {
     border: none;
 }
 
-button {
+.login-btn{
     background-color: #f5a623;
     border: 2px solid #f5a623;
     border-radius: 10px;

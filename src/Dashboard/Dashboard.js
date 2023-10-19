@@ -1,14 +1,21 @@
-import React from 'react'
-import Header from '../Header/Header'
-function Dashboard() {
-  return (
-    
-    <>
-    <Header/>
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import LatestHits from './LatestHits';
+import Performance from './Performance';
 
-    
+function Dashboard() {
+ 
+
+
+  return (
+    <>
+      <Header />
+      <LatestHits/>
+      
+      
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
