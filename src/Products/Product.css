@@ -1,0 +1,155 @@
+.products-wrapper {
+    padding: 57px 145px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-container div:first-child {
+    width: 57%;
+}
+
+.product-container>div {
+    background-color: #435c70;
+    padding: 40px;
+}
+
+.product-table-body {
+    overflow-y: scroll;
+    width: 100% !important;
+}
+
+.product-table-bodyinput[type=checkbox] {
+    border-radius: 50%;
+}
+
+table {
+    background-color: #50697f;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 85%;
+    margin-bottom: 0;
+    text-align: left;
+    width: 100%;
+}
+
+thead {
+    background-color: #486177;
+    text-transform: uppercase;
+}
+
+.roundded-checkbox input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+
+label {
+    margin-bottom: 1rem;
+}
+
+.product-checkmark {
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 0 8px;
+    position: relative;
+
+}
+
+
+.roundded-checkbox input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+table td,
+table th {
+    border-top: 1px solid #415a70;
+    padding: 15px 20px;
+}
+
+label {
+    margin-bottom: 1rem;
+}
+
+.product-checkmark {
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 0 8px;
+    position: relative;
+}
+
+.roundded-checkbox input:checked + .product-checkmark {
+    background-color: #2196f3;
+    border-color: #2196f3;
+}
+
+.roundded-checkbox input:not(:checked) + .product-checkmark:after {
+    content: "";
+    display: none;
+}
+.product-checkmark:after {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    content: "";
+    display: block; 
+    height: 10px;
+    left: 5px;
+    position: absolute;
+    top: 1px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 5px; 
+}
+
+.product-categories{
+    
+        height: 320px;
+        overflow-y: scroll;
+        width: 100%!important;
+    }
+button{
+    background-color: #f5a623;
+    border: 2px solid #f5a623;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 100%;
+    padding: 13px 28px;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    width: 100%;
+    margin-top: 14px;
+}
+input, select, textarea {
+    background-clip: padding-box;
+    background-color: #54657d;
+    border: 0;
+    border-radius: 0.25rem;
+    border-radius: 0;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0 20px;
+    padding: 10px 18px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: -webkit-fill-available;
+}
+.product-table-body-wrapper{
+    width: 100% !important;
+}
+.form-category{
+    background-color: #435c70;
+}
+.btn:hover {
+    background-color: initial;
+    border: 2px solid #f5a623;
+    color: #f5a623;
+}

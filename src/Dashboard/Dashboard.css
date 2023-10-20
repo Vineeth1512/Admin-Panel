@@ -80,7 +80,7 @@ thead {
 }
 table td, table th {
     border-top: 1px solid #415a70;
-    padding: 15px 20px;
+    padding: 20px 20px;
 }
 .order-list-status{
     left: 15px;
@@ -129,4 +129,18 @@ table td, table th {
     top: 20px;
     width: 5px;
 
+}
+.display {
+    display: flex;
+}
+.unit {
+    margin-left: 241px;
+}
+.expire {
+    width: 251px;
+}
+.unit-sold {
+    margin-left: 321px;
+    margin-top: -69px;
+    width: 250px;
 }

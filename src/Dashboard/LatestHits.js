@@ -3,7 +3,6 @@ import "./Dashboard.css";
 import ApexCharts from 'react-apexcharts';
 import NotifcationList from './NotifcationList';
 import OrdersList from './OrdersList';
-
 function LatestHits() {
     const localStorageApiData = JSON.parse(localStorage.getItem("apiData"));
     const DashboardDetails = localStorageApiData.dasbhoardPage;
@@ -14,7 +13,7 @@ function LatestHits() {
     const performanceData = DashboardDetails.performance;
     const datakeys = Object.keys(performanceData)
     const dataValues = Object.values(performanceData);
-    console.log(datakeys);
+    
 
     const options = {
         chart: {
@@ -142,12 +141,9 @@ function LatestHits() {
                                 time={user.time}
                             />
                         })}
-
                     </div>
-
                 </div>
             </div >
-
             <div className='order-list-wrapper'>
                 <h2>Orders List</h2>
                 <table>
@@ -175,10 +171,8 @@ function LatestHits() {
                                 deliveryDate={order.deliveryDate}                      
                             />
                         })}
-                       
                     </tbody>
                 </table>
-
             </div>
         </>
     )

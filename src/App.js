@@ -10,6 +10,7 @@ import axios from 'axios';
 function App() {
   var [isLoggedIn, setIsLoggedIn] = useState(false);
   let [dashboard, setDashboard] = useState([]);
+  let [products ,setProducts] = useState([]);
  // let [apiData ,setApiData] = useState([])
 
   useEffect(() => {
@@ -17,6 +18,11 @@ function App() {
      console.log(response.data);
       //setDashboard(response.data.dasbhoardPage);
       localStorage.setItem("apiData",JSON.stringify(response.data));
+      localStorage.setItem("productPage",JSON.stringify(response.data.productsPage))
+      localStorage.setItem("dashboardPage",JSON.stringify(response.data.dasbhoardPage))
+      localStorage.setItem("accountsPage",JSON.stringify(response.data.accountsPage))
+      
+
     }).catch((err) => {
       console.log(err);
     })
