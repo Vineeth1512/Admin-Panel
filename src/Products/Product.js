@@ -6,13 +6,16 @@ import { useState } from 'react'
 import ProductTable from './ProductTable';
 import AddNewProductForm from './AddNewProductForm'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import AddNewCategory from './AddNewCategory'
 import CategoryTable from './CategoryTable'
-
 function Product() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
   const [isFormVisible, setFormVisible] = useState(false);
   const [isCategory, setIsCategory] = useState(false);
-  // const [newCategory, setNewCategory] = useState(''); 
+
   const productPageData = JSON.parse(localStorage.getItem('productPage')) || { products: [], categories: [] };
   console.log("productPageData:", productPageData);
   const productsTableData = productPageData.products;

@@ -13,7 +13,7 @@
 
 .product-container>div {
     background-color: #435c70;
-    padding: 40px;
+    padding: 15px;
 }
 
 .product-table-body {
@@ -152,4 +152,7 @@ input, select, textarea {
     background-color: initial;
     border: 2px solid #f5a623;
     color: #f5a623;
+}
+.pic-details-wrapper{
+    display: flex;
 }

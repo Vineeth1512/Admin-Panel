@@ -1,0 +1,49 @@
+.acount-content-wrapper {
+    padding: 35px 145px;
+}
+
+.list-of-account {
+    background-color: #435c70;
+    padding: 40px;
+}
+
+.form-wrapper {
+    display: flex;
+}
+
+.image-container {
+    position: relative;
+
+}
+
+.image-content-wrapper {
+    background-color: #435c70;
+    padding: 40px;
+}
+
+.image-content-wrapper:first-child {
+    margin-right: 30px;
+    width: 30%;
+}
+
+.image-content-wrapper img {
+    height: auto;
+    width: 100%;
+}
+
+.image-content-wrapper:last-child {
+    width: 70%;
+}
+
+.input-container {
+    display: flex;
+}
+
+.image-content-wrapper .input-container:first-child .input-fields {
+    margin-right: 80px;
+}
+
+.image-content-wrapper .input-container .input-fields {
+    margin-right: 40px;
+    width: 100%;
+}

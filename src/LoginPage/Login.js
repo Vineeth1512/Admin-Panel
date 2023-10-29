@@ -1,51 +1,52 @@
 import React from 'react'
 import "./Login.css"
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import Dashboard from '../Dashboard/Dashboard'
-function Login() {
+function Login(props) {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+   
     const navigate = useNavigate();
 
     useEffect(() => {
         var localStateValue = JSON.parse(localStorage.getItem("isLoggedIn"));
         if (localStateValue == null) {
-          localStorage.setItem("isLoggedIn", false);
-          setIsLoggedIn(false);
+            localStorage.setItem("isLoggedIn", false);
+           props.setIsLoggedIn(false);
         }
-        else{
-          setIsLoggedIn(localStateValue);
+        else {
+           props.setIsLoggedIn(localStateValue);
         }
-      })
+       
+    },[props.isLoggedIn]);
 
 
 
     const loginValidation = (event) => {
+        event.preventDefault();
         if (username === password) {
             alert("Login Successfull..");
             localStorage.setItem("isLoggedIn", true);
-            
+            props.setIsLoggedIn(true);
             navigate("/dashboard");
-            setIsLoggedIn(true);
+          
         } else {
             alert("Please enter valid credentials!");
         }
 
     }
-    if (isLoggedIn) {
+    if (props.isLoggedIn) {
         return <Dashboard
-            isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            isLoggedIn={props.isLoggedIn} setIsLoggedIn={props.setIsLoggedIn} />
     }
-  
 
 
     return (
         <>
-            <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}  navigate ={navigate} />
+           <Header isLoggedIn={props.isLoggedIn} setIsLoggedIn={props.setIsLoggedIn} />
             <div className='login-wrapper'>
                 <div className='login-container'>
                     <div>
